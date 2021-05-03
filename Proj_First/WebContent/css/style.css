@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+body{
+	padding: 20px;
+}
+ul{
+	list-style: none;
+}
+#wrap{
+	border: 1px solid #333;
+	width: 100%;
+	max-width: 1050px;
+	margin: auto;
+}
+
+#header{
+	width: 100%;
+	height: 150px;
+	border-bottom: 1px solid #333;
+}
+
+#nav{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #333;
+	line-height: 50px;
+}
+#subMenu{
+	float: left;
+	min-height:600px;
+	padding: 10px 15px;
+}
+#main{
+	width:100%;
+	
+    border-left: 1px solid #333;
+    float: left;
+    min-height:620px;
+    padding: 10px;
+}
+@media screen and (min-width: 100px){
+                #main{max-width:65%;}
+}
+@media screen and (min-width: 1140px){
+                #main{max-width:87%;}
+}
+
+#footer{
+	width:100%;
+	border-top:1px solid #333;
+	clear: both;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+.button {
+    background-color: #333333;
+    border: none;
+    color: white;
+    padding: 3px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+}
+img{
+	max-width: 99%;
+}
+ /**side **/
+#sideMenu li{
+	margin-top: 12px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#sideMenuMember li{
+	margin-top: 12px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+
+
+
+/** footer **/
+#footerWrap{
+	text-align:center;
+	background-color: #333333;
+}
+
+
+/** headerr **/
+#headerWrap{
+    color: white;
+    background-color: #333333;
+    height: 150px;
+    line-height: 150px;
+    padding-left: 5px;
+}
+
+
+
+
+/** nav **/
+#navMenu{
+	list-style: none;
+}
+#navMenu li{
+	display: inline-block;
+}
+#navMenu li input[type=text],input[type=password]{
+	padding-left: 3px;
+	color: #333333;
+}
+#navWrap{
+	padding: 0px 10px;
+}
+#boardLIst li{
+	display: inline-block;
+	cursor: pointer;
+    text-decoration: underline;
+}
+#myInfos{
+	cursor : pointer;
+}
+
+/** 로그인 영역 **/
+#loginWrap{
+	width: 100%;
+}
+#loginWrap input[type=text],#loginWrap input[type=password] {
+	width: 50%;
+	height: 50px;
+	font-size:16px;
+    border-radius: 3px;
+      -webkit-transition: all 0.30s ease-in-out;
+	  -moz-transition: all 0.30s ease-in-out;
+	  -ms-transition: all 0.30s ease-in-out;
+	  -o-transition: all 0.30s ease-in-out;
+	  outline: none;
+	  padding: 3px 0px 3px 3px;
+	  border: 1px solid #DDDDDD;
+}
+ input[type=password]:focus, input[type=text]:focus{ 
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+/**회원가입 영역**/
+#memberWrap{
+	width: 80%;
+	margin: auto;
+	
+}
+
+
+/**Faq**/
+.faqTitle{
+	color:#e1e1e1;
+	background-color: #1e1d1d;
+}
+.faqTd1{
+	box-sizing: border-box;
+	border-right: 1px solid #ddd;
+	width: 20%;
+	display: inline-block;
+	padding: 11px 0px;
+	font-size: 12px;
+	text-align: center;
+}
+.faqTd2{
+	width: 80%;
+	display: inline-block;
+	padding: 11px 0px;
+	font-size: 12px;
+	text-align: left;
+}
+.faqList{
+	background-color: #eee;
+	color:#000;
+	margin-top: -1px;
+}
+.faqTd2 div{
+	padding-left: 25px;
+}
+.faqListContent{
+	font-size: 11px;
+}
+.faqT{
+	display: none;
+}
+
+
+
+
+
+/** 이미지 게시판 시작**/
+
+/*list.jsp(이미지)*/
+#sumnail{
+	border:1px solid black;
+	width: 133px;
+	height: 150px;
+	padding:4px 2px 4px 4px;
+}
+#nonImg{
+	border:1px solid black;
+	width: 133px;
+	height: 150px;
+	padding:4px 2px 4px 4px;
+}
+#main #imgList_dl{
+	border: 1px solid #E3E3E3;
+	border-radius: 2px;
+	text-align: center;
+}
+#main #imgList_dd{	
+	display: inline-block;
+	border: 1px solid #E3E3E3;
+	margin:10px 7px 20px;		
+	padding: 4px 5px 4px 5px;
+}
+#main #img_page{
+	text-align: center;
+	font-size: 12px;
+}
+#main #img_serchFrm{
+	
+}
+
+/*read.jsp(이미지)///////////////////////////////////////////////////*/
+
+#main #imgRead_tb{
+	width: 100%;
+	height: 35px;
+	border-top: 1px dotted black;
+	border-bottom: 1px dotted black;
+	background-color: #E3E3E3;
+}
+#main #imgRead_tb td, #main #imgRead_tb th{
+	width: 33%;
+	text-align: center;
+	font: normal;
+}
+#main #imgRead_subj{
+	text-align: center;
+    padding: 15px 0;
+    font-size: 25px;
+    color: brown;
+}
+#main #imgRead_img{
+	
+	padding-left: 10px;
+	margin-bottom: 20px;
+}
+#main #imgRead_img img{
+	width:80%;
+}
+
+#main #imgRead_dl #down_bt{
+	width: 40px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+#main #imgRead_cont{
+	margin-bottom: 50px;
+}
+#imgRead_rep{
+	width:90%;
+	border: 1px solid #E3E3E3;	
+	padding: 3px;`
+}
+#imgRead_rep #rep_table{
+	width:70%;
+	margin:5px;
+	border: 1px solid #E4E4E4;
+}
+#rep_tr1 td , #rep_tr2 td{
+	padding: 3px;
+}
+#rep_tr1 td:nth-child(1){
+	color: gray;
+	font-size: 15px;
+}
+#rep_tr1 td:nth-child(2){
+	color: blue;
+	font-size: 6px;
+}
+#rep_tr2 td{
+	border-top: 3px dotted #E3E3E3;
+	font-size: 15px; 
+}
+#main #contentsText{
+	padding-top:5px;
+	width: 70%;
+	height: 50px;
+}
+
+/** 이미지 게시판 끝//////////////////////////////////////////////// **/
+
+
