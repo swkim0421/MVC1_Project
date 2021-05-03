@@ -18,7 +18,7 @@
 	
 	if(result){
 		alertMsg = "회원가입을 축하합니다";
-		sendUrl = "http://192.168.0.79:8180/Proj_First/jsp/index.jsp";
+		sendUrl = "http://localhost:8680/Proj_First/jsp/index.jsp";
 	}else{
 		sendUrl = "member.jsp";
 		alertMsg = "회원가입에 실패하였습니다 축하합니다. 다시 가입하십시오";
