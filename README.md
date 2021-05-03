@@ -23,12 +23,14 @@
   
   0.1 회원가입 버튼 : Proj_First > jsp > index.jsp파일을 실행 하면 회원가입 버튼이 좌측 우측상단에 있고, 
      회원가입 버튼을 실행 하면 결과는 ->
-     ![index jsp에 회원가입 버튼](https://user-images.githubusercontent.com/83484877/116867267-c607fd80-ac47-11eb-81b7-96b1df082a7b.jpg)
+     
+   ![index.jsp에 회원가입 버튼](https://user-images.githubusercontent.com/83484877/116871213-e091a500-ac4e-11eb-8e23-665d43614ef8.jpg)
   
   0.2 회원가입 창 : 회원가입 창은 Proj_First > jsp > index.jsp에서 member_jsp > member.jsp가 실행 ->
     ![회원가입 창](https://user-images.githubusercontent.com/83484877/116867386-05cee500-ac48-11eb-8288-4321d2a2367f.jpg)
 
   0.3 회원가입 절차 중 우편번호 정보 추가는 SQL에서 insert into tblZipcode values('14506','부천시','원미구','상동 다정한마을','500-5번지');코드를 실행 > SQL에 우편번호 추가(검색)의 데이터 결과는 ->
+  
   ![우편번호 추가](https://user-images.githubusercontent.com/83484877/116866688-cfdd3100-ac46-11eb-81fd-1b8d44a55cc4.jpg)
   
   0.4 회원가입 창에서 우편번호 찾기 버튼 ->
@@ -37,7 +39,25 @@
   0.5 우편번호 찾기 검색 창 : SQL에서 추가한 insert구문을 우편번호 검색창에서 동_이름을 검색 후 뵤여지는 결과 -> 
   ![우편번호 검색란 ](https://user-images.githubusercontent.com/83484877/116867902-c654c880-ac48-11eb-9fa1-44e56fe59e58.jpg)
 
-  
+  0.6 회원가입 등록 : 회원가입 절차 대로 아이디, 비밀번호, 이름, 생년월일, 우편번호, 취미 등 입력 후 > 마지막에는 회원상세정보가 일반 과 관리자가 있다
+    -> 일반 과 관리자 둘중 1개를 선택을 해 가입 등록 하면 알림 메세지 창이 뜸
+    
+   일반 과 관리자 둘중 선택 > 회원가입 결과 ->
+   
+   ![가입 알림창(일반)](https://user-images.githubusercontent.com/83484877/116872162-67934d00-ac50-11eb-9762-4c2347342cb0.jpg)
+
+   일반을 선택 > 로그인 결과 ->
+   
+   ![로그인(일반)](https://user-images.githubusercontent.com/83484877/116872423-d2dd1f00-ac50-11eb-817d-f75ff454cc53.jpg)
+
+   관리자를 선택 > 회원가입 결과 ->
+   
+   ![회원가입(관리자)](https://user-images.githubusercontent.com/83484877/116872739-6282cd80-ac51-11eb-8ec9-70a341972eeb.jpg)
+   
+   관리자를 선택 > 로그인 결과[우측 상단에 내글 (관리자)] ->
+   
+   ![로그인(관리자)](https://user-images.githubusercontent.com/83484877/116873159-28fe9200-ac52-11eb-8809-190b1d266189.jpg)
+
 1. 게시판 리스트 : Proj_First > jsp > free.jsp 실행 후 > ../freeBBS_jsp > list.jsp(리스트 파일이 실행됨)
  1.1 게시판 로그인 방법 : 
 2. 게시판 글쓰기(게시물 작성) : 1번(list.jsp)에서 String id = (String)session.getAttribute("idKey"); 로그인의 아이디를 세션으로.
