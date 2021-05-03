@@ -19,8 +19,25 @@
 
 웹프로젝트 저의 파트 결과 내용 :
 
-0. 로그인 방법 : 로그인은 SQL의 DB가 있는데 거기에 Insert tblmember values(...) 코드가 있는데 데이터를 추가 하면 로그인이 가능합니다.
+0. 로그인 방법 : 회원가입 버튼 실행 > 회원가입 절차중 우편번호 검색은 DBtable_code.sql파일안에 우편번호 정보 추가는 insert into tblZipcode values('14506','부천시','원미구','상동 다정한마을','500-5번지');이다
+  
+  0.1 회원가입 버튼 : Proj_First > jsp > index.jsp파일을 실행 하면 회원가입 버튼이 좌측 우측상단에 있고, 
+     회원가입 버튼을 실행 하면 결과는 ->
+     ![index jsp에 회원가입 버튼](https://user-images.githubusercontent.com/83484877/116867267-c607fd80-ac47-11eb-81b7-96b1df082a7b.jpg)
+  
+  0.2 회원가입 창 : 회원가입 창은 Proj_First > jsp > index.jsp에서 member_jsp > member.jsp가 실행 ->
+    ![회원가입 창](https://user-images.githubusercontent.com/83484877/116867386-05cee500-ac48-11eb-8288-4321d2a2367f.jpg)
 
+  0.3 회원가입 절차 중 우편번호 정보 추가는 SQL에서 insert into tblZipcode values('14506','부천시','원미구','상동 다정한마을','500-5번지');코드를 실행 > SQL에 우편번호 추가(검색)의 데이터 결과는 ->
+  ![우편번호 추가](https://user-images.githubusercontent.com/83484877/116866688-cfdd3100-ac46-11eb-81fd-1b8d44a55cc4.jpg)
+  
+  0.4 회원가입 창에서 우편번호 찾기 버튼 ->
+    ![우편번호 찾기 버튼](https://user-images.githubusercontent.com/83484877/116867578-6e1dc680-ac48-11eb-9538-e0a07d576439.jpg)
+
+  0.5 우편번호 찾기 검색 창 : SQL에서 추가한 insert구문을 우편번호 검색창에서 동_이름을 검색 후 뵤여지는 결과 -> 
+  ![우편번호 검색란 ](https://user-images.githubusercontent.com/83484877/116867902-c654c880-ac48-11eb-9fa1-44e56fe59e58.jpg)
+
+  
 1. 게시판 리스트 : Proj_First > jsp > free.jsp 실행 후 > ../freeBBS_jsp > list.jsp(리스트 파일이 실행됨)
  1.1 게시판 로그인 방법 : 
 2. 게시판 글쓰기(게시물 작성) : 1번(list.jsp)에서 String id = (String)session.getAttribute("idKey"); 로그인의 아이디를 세션으로.
