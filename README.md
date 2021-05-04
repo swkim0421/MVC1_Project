@@ -24,7 +24,7 @@
   0.1 회원가입 버튼 : Proj_First > jsp > index.jsp파일을 실행 하면 회원가입 버튼이 좌측 우측상단에 있고, 
      회원가입 버튼을 실행 하면 결과는 ->
      
-   ![index.jsp에 회원가입 버튼](https://user-images.githubusercontent.com/83484877/116871213-e091a500-ac4e-11eb-8e23-665d43614ef8.jpg)
+   <img src="https://user-images.githubusercontent.com/83484877/116871213-e091a500-ac4e-11eb-8e23-665d43614ef8.jpg" width="700" height="370">
   
   0.2 회원가입 창 : 회원가입 창은 Proj_First > jsp > index.jsp에서 member_jsp > member.jsp가 실행 ->
     ![회원가입 창](https://user-images.githubusercontent.com/83484877/116867386-05cee500-ac48-11eb-8288-4321d2a2367f.jpg)
