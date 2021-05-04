@@ -1,23 +1,156 @@
-# 김성원의 프로젝트
+# 🏵️ 김성원의 프로젝트
 - Team Project
 
-## MVC1패턴 기반 웹 프로젝트
+## 🎖️ MVC1패턴 기반 웹 프로젝트
 
-프로젝트 과정
+:computer: 프로젝트 과정
 
 ◎ 기간 : 2019. 04. 15 ~ 2019. 04. 30
 
 ◎ 총 팀원 수 : 5명
 
-◎ 내용 : MVC1 패턴을 기반으로한 다양한 게시판의 웹 홈페이지의 프로젝트
+◎ 내용 : MVC1 패턴 기반 게시판의 웹 홈페이지 프로젝트
 
 ◎ 프로젝트 사용 언어 : Html, JSP, Java, Javascript, CSS, My-SQL(DB)..등
 
 1. 본인 - 자유 게시판
 * 내용 : 게시글 작성 및 등록, 수정, 게시글 업로드 및 삭제, 게시글의 파일 업로드 및 다운로드, 게시글 등록 시간, 게시글 조회수, 게시글 작성의 로그인 권한, 답변글, DB에 게시글 등록 데이터
+
 2. 나머지 팀원들 - 갤러리 게시판, 공지 게시판, 익명 게시판,로그인창, 회원가입 등
 
-웹프로젝트 저의 파트 결과 내용 :
+### 🥇 환경 :
+⊙ JDK  : 1.8.version
+
+⊙ TOMCAT : 8.5.version
+
+⊙ Eclipse : Eclipse IDE for Enterprise Java Developers & 2018-12 (4.10.0)
+
+⊙ 인코딩 : UTF-8
+
+⊙ My-SQL Workbench : 8.0
+
+### 🥈 환경 변수 :  
+⊙ JDK 1.8version 설치
+ 
+ 1. 제어판 > 시스템 및 보안 > 시스템 >  고급 시스템 설정 > 환경 변수(N) > 시스템 변수(S) > [세로만들기(W)] >
+변수 이름(N): JAVA_HOME > 변수 값(V): jdk 1.8version이 설치된 파일 경로 > [확인]
+ 
+ 1.1 환경변수 > 시스템 변수(S) > Path 선택 > [편집(I)] > 시스템 변수 편집 > 변수 이름(N): Path > 변수 값(V) > %JAVA_HOME%\bin; > [확인]
+ 
+ 2. 시작 버튼(Win) + X > 명령 프롬프트(C) [CMD] > java -version > java version 1.8.0_291
+ 
+ 2.1  시작 버튼(Win) + X > 명령 프롬프트(C) [CMD] > javac -version > 1.8.0_221
+
+My-SQL 스키마 생성
+
++  mydb : 스키마 생성
++  use mydb : 스키마 선택
+
+create database mydb;
+
+use mydb;
+
+My-SQL 테이블 생성 및 데이터 추가
+
++ tblMember 테이블 생성
+
+  ⊙CREATE TABLE `tblMember` (
+  
+  `id` char(20) NOT NULL,
+  
+  `pass` char(20) NOT NULL,
+  
+  `name` char(20) NOT NULL,
+  
+  `sex` char(1) NOT NULL,
+  
+  `birthday` char(6) NOT NULL,
+  
+  `email` char(30) NOT NULL,
+  
+  `zipcode` char(7) NOT NULL,
+  
+  `address` char(50) NOT NULL,
+  
+  `hobby` char(5) NOT NULL,
+  
+  `job` char(20) NOT NULL,
+  
+  `memberLevel` int(3) not null,
+  
+  PRIMARY KEY (`id`)
+);
+ 
++ tblZipcode 테이블 생성 //우편번호 찾기
+ 
+  CREATE TABLE `tblZipcode` (
+  
+  `zipcode` char(7) NOT NULL,
+  
+  `area1` char(10) DEFAULT NULL,
+  
+  `area2` char(20) DEFAULT NULL,
+  
+  `area3` char(40) DEFAULT NULL,
+  
+  `area4` char(20) DEFAULT NULL
+);
+  
+  //우편번호 찾기의 정보 추가
+ 
+insert into tblZipcode values('14506','부천시','원미구','상동 다정한마을','500-5번지');
+
+insert into tblZipcode values('14507','부천시','원미구','상동 진달래마을','526-4번지');
+
+insert into tblZipcode values('14536','부천시','원미구','중동 덕유마을','1040번지');
+
+insert into tblZipcode values('14539','부천시','원미구','중동 중흥마을','1054번지');
+
+insert into tblZipcode values('14538','부천시','원미구','중동 은하마을','1036번지');
+
+insert into tblZipcode values('14535','부천시','원미구','중동 설악마을','1051-12번지');
+
+insert into tblZipcode values('14511','부천시','원미구','중동 한라마을','1027-3번지');
+
++ tblBoard 테이블 생성 //게시판 리스트 및 게시글
+  
+  create table `tblBoard`(
+
+`num` int(11) not null auto_increment,
+
+`name` varchar(25) ,
+
+`subject` varchar(100),
+
+`content` text,
+
+`pos` int(7) unsigned,
+
+`ref` int(7),
+
+`depth` int(7) unsigned,
+
+`regdate` date,
+
+`pass` varchar(20),
+
+`ip` varchar(15),
+
+`count` int(7) unsigned,
+
+`filename` varchar(35),
+
+`filesize` int(11),
+
+`tblcode` int(5),
+
+`id` varchar(30),
+
+primary key(`num`)
+);
+
+
+### 프로젝트 기능 구현 및 결과 내용 설명:
 
 0. 로그인 방법 : 회원가입 버튼 실행 > 회원가입 절차중 우편번호 검색은 DBtable_code.sql파일안에 우편번호 정보 추가는 insert into tblZipcode values('14506','부천시','원미구','상동 다정한마을','500-5번지');이다
   
@@ -163,3 +296,8 @@
    5.3 첨부된 파일 클릭 후 > 첨부 된 파일 원하는 저장 위치를 선택해 다운로드 ->
 
 <img src="https://user-images.githubusercontent.com/83484877/116852382-32c2ce00-ac2f-11eb-8634-8e6bcc44b71f.jpg" width="650" height="400">
+
+🏆 웹 프로젝트 과정 내용 간략하게 구현 [PPT]
+
+[김성원.pptx](https://github.com/swkim0421/swkimProject/files/6419255/default.pptx)
+
