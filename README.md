@@ -299,5 +299,6 @@ primary key(`num`)
 
 🏆 웹 프로젝트 과정 내용 간략하게 구현 [PPT]
 
-[김성원.pptx](https://github.com/swkim0421/swkimProject/files/6419255/default.pptx)
+[포트폴리오_김성원.pptx](https://github.com/swkim0421/MVC1_Project/files/6440716/_.pptx)
+
 
